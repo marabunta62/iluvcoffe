@@ -11,6 +11,9 @@ async function bootstrap() {
       forbidNonWhitelisted: true,
       // payload data incoming conform to DTO types
       transform: true,
+      transformOptions: {
+        enableImplicitConversion: true,
+      },
     }),
   );
   await app.listen(3000);
